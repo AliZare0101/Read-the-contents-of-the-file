@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int num;
+	char name[100];
+	FILE *file;
+	file = fopen("Desired address","a");
+	if(file == NULL)
+	{
+		printf("\nERROR!");
+	}
+	fscanf(file,"%s %d", &name , &num);
+
+	printf("\n> %s %d ",name , num);
+	fclose(file);
+}
